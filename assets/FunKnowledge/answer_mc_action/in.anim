@@ -1,0 +1,132 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "in",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.6666666865348816,
+  "sample": 30,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "answer_mc/CCBFile": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                -879.7916641235352,
+                -539.8333320617676
+              ],
+              "curve": "linear"
+            }
+          ],
+          "scaleX": [
+            {
+              "frame": 0,
+              "value": 0,
+              "curve": "backIn"
+            },
+            {
+              "frame": 0.3333333432674408,
+              "value": 1,
+              "curve": "linear"
+            }
+          ],
+          "scaleY": [
+            {
+              "frame": 0,
+              "value": 0,
+              "curve": "backIn"
+            },
+            {
+              "frame": 0.3333333432674408,
+              "value": 1,
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "answer_mc/CCBFile_1": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                -879.7916641235352,
+                -564.8333320617676
+              ],
+              "curve": "linear"
+            }
+          ],
+          "scaleX": [
+            {
+              "frame": 0.1666666716337204,
+              "value": 0,
+              "curve": "backIn"
+            },
+            {
+              "frame": 0.5,
+              "value": 1,
+              "curve": "linear"
+            }
+          ],
+          "scaleY": [
+            {
+              "frame": 0.1666666716337204,
+              "value": 0,
+              "curve": "backIn"
+            },
+            {
+              "frame": 0.5,
+              "value": 1,
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "answer_mc/CCBFile_2": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                -879.7916641235352,
+                -589.5833330154419
+              ],
+              "curve": "linear"
+            }
+          ],
+          "scaleX": [
+            {
+              "frame": 0.3333333432674408,
+              "value": 0,
+              "curve": "backIn"
+            },
+            {
+              "frame": 0.6666666865348816,
+              "value": 1,
+              "curve": "linear"
+            }
+          ],
+          "scaleY": [
+            {
+              "frame": 0.3333333432674408,
+              "value": 0,
+              "curve": "backIn"
+            },
+            {
+              "frame": 0.6666666865348816,
+              "value": 1,
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      }
+    }
+  },
+  "events": []
+}

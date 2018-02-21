@@ -1,0 +1,82 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "loop",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 2,
+  "sample": 30,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "s/ani_mc": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                28.491621017456055,
+                17.26755142211914
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 1,
+              "value": [
+                28.491621017456055,
+                19.165084838867188
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 2,
+              "value": [
+                28.491621017456055,
+                17.26755142211914
+              ],
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "s/ani_mc/p36_2": {
+        "props": {
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.5,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.5,
+              "value": -1,
+              "curve": "linear"
+            },
+            {
+              "frame": 2,
+              "value": 0,
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "CCBFile": {
+        "props": {},
+        "comps": {}
+      }
+    }
+  },
+  "events": []
+}

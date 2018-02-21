@@ -1,0 +1,172 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "act",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.5,
+  "sample": 30,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "s/ani_mc": {
+        "props": {
+          "scaleX": [
+            {
+              "frame": 0,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.10000000149011612,
+              "value": 1.100000023841858,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.20000000298023224,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.3333333432674408,
+              "value": 0.9599999785423279,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.46666666865348816,
+              "value": 1,
+              "curve": "linear"
+            }
+          ],
+          "scaleY": [
+            {
+              "frame": 0,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.10000000149011612,
+              "value": 0.8999999761581421,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.20000000298023224,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.3333333432674408,
+              "value": 1.0399999618530273,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.46666666865348816,
+              "value": 1,
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "s/ani_mc/p12_2": {
+        "props": {
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.10000000149011612,
+              "value": 20,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.20000000298023224,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.3333333432674408,
+              "value": -20,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.46666666865348816,
+              "value": 0,
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "s/ani_mc/p12_4": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                -85.6127718091011,
+                266.4015203230083
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 0.10000000149011612,
+              "value": [
+                -85.6127718091011,
+                242.4015203230083
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 0.20000000298023224,
+              "value": [
+                -85.6127718091011,
+                266.4015203230083
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 0.3333333432674408,
+              "value": [
+                -85.6127718091011,
+                283.4015203230083
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 0.46666666865348816,
+              "value": [
+                -85.6127718091011,
+                266.4015203230083
+              ],
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "s/ani_mc/p12_4/p12_5": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": true
+            },
+            {
+              "frame": 0.10000000149011612,
+              "value": false
+            },
+            {
+              "frame": 0.3333333432674408,
+              "value": true
+            }
+          ]
+        },
+        "comps": {}
+      }
+    }
+  },
+  "events": []
+}

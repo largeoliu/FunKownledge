@@ -1,0 +1,51 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "loop",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 2,
+  "sample": 30,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "s/ani_mc": {
+        "props": {
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.5,
+              "value": 2,
+              "curve": "linear"
+            },
+            {
+              "frame": 1,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.5,
+              "value": -2,
+              "curve": "linear"
+            },
+            {
+              "frame": 2,
+              "value": 0,
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "CCBFile": {
+        "props": {},
+        "comps": {}
+      }
+    }
+  },
+  "events": []
+}

@@ -1,0 +1,414 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "loop",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 2.133333444595337,
+  "sample": 30,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "s/ani_mc": {
+        "props": {
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.10000000149011612,
+              "value": -5,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.20000000298023224,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.36666667461395264,
+              "value": 8,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.5666666626930237,
+              "value": 10,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.800000011920929,
+              "value": 8,
+              "curve": "linear"
+            },
+            {
+              "frame": 1,
+              "value": 10,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.2000000476837158,
+              "value": 8,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.399999976158142,
+              "value": 10,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.600000023841858,
+              "value": 8,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.7999999523162842,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.899999976158142,
+              "value": -2,
+              "curve": "linear"
+            },
+            {
+              "frame": 2,
+              "value": 0,
+              "curve": "linear"
+            }
+          ],
+          "scaleX": [
+            {
+              "frame": 0,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.10000000149011612,
+              "value": 1.0499999523162842,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.20000000298023224,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.36666667461395264,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.5666666626930237,
+              "value": 0.9700000286102295,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.800000011920929,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1,
+              "value": 0.9700000286102295,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.2000000476837158,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.399999976158142,
+              "value": 0.9700000286102295,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.600000023841858,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.7999999523162842,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.899999976158142,
+              "value": 1.0199999809265137,
+              "curve": "linear"
+            },
+            {
+              "frame": 2,
+              "value": 1,
+              "curve": "linear"
+            }
+          ],
+          "scaleY": [
+            {
+              "frame": 0,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.10000000149011612,
+              "value": 0.949999988079071,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.20000000298023224,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.36666667461395264,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.5666666626930237,
+              "value": 1.0299999713897705,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.800000011920929,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1,
+              "value": 1.0299999713897705,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.2000000476837158,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.399999976158142,
+              "value": 1.0299999713897705,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.600000023841858,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.7999999523162842,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.899999976158142,
+              "value": 0.9800000190734863,
+              "curve": "linear"
+            },
+            {
+              "frame": 2,
+              "value": 1,
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "s/ani_mc/p2_5": {
+        "props": {
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.10000000149011612,
+              "value": 20,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.20000000298023224,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.36666667461395264,
+              "value": -10,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.5666666626930237,
+              "value": -20,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.800000011920929,
+              "value": -10,
+              "curve": "linear"
+            },
+            {
+              "frame": 1,
+              "value": -20,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.2333333492279053,
+              "value": -10,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.4333332777023315,
+              "value": -20,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.6666666269302368,
+              "value": -10,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.7999999523162842,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.899999976158142,
+              "value": 10,
+              "curve": "linear"
+            },
+            {
+              "frame": 2,
+              "value": 0,
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "s/ani_mc/p2_2": {
+        "props": {
+          "scaleX": [
+            {
+              "frame": 0.36666667461395264,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.5666666626930237,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.800000011920929,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.2000000476837158,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.399999976158142,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.600000023841858,
+              "value": 1,
+              "curve": "linear"
+            }
+          ],
+          "scaleY": [
+            {
+              "frame": 0.36666667461395264,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.5666666626930237,
+              "value": 1.2000000476837158,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.800000011920929,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1,
+              "value": 1.2000000476837158,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.2000000476837158,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.399999976158142,
+              "value": 1.2000000476837158,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.600000023841858,
+              "value": 1,
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {
+          "cc.Sprite": {
+            "spriteFrame": [
+              {
+                "frame": 0,
+                "value": {
+                  "__uuid__": "92301fd5-6de1-4f90-a3b5-39070143a69e"
+                }
+              },
+              {
+                "frame": 0.10000000149011612,
+                "value": {
+                  "__uuid__": "891b2db5-54ce-4700-99ae-2f9ed1f25d8e"
+                }
+              },
+              {
+                "frame": 0.36666667461395264,
+                "value": {
+                  "__uuid__": "92301fd5-6de1-4f90-a3b5-39070143a69e"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "s/ani_mc/p2_1": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            },
+            {
+              "frame": 0.10000000149011612,
+              "value": true
+            },
+            {
+              "frame": 1.7999999523162842,
+              "value": false
+            }
+          ]
+        },
+        "comps": {}
+      }
+    }
+  },
+  "events": []
+}

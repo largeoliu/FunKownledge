@@ -1,0 +1,93 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "act",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.5,
+  "sample": 30,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "s/ani_mc": {
+        "props": {
+          "scaleX": [
+            {
+              "frame": 0,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.10000000149011612,
+              "value": 1.100000023841858,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.20000000298023224,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.3333333432674408,
+              "value": 0.9599999785423279,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.46666666865348816,
+              "value": 1,
+              "curve": "linear"
+            }
+          ],
+          "scaleY": [
+            {
+              "frame": 0,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.10000000149011612,
+              "value": 0.8999999761581421,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.20000000298023224,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.3333333432674408,
+              "value": 1.0399999618530273,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.46666666865348816,
+              "value": 1,
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "s/ani_mc/p11_2/p11_3": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": true
+            },
+            {
+              "frame": 0.10000000149011612,
+              "value": false
+            },
+            {
+              "frame": 0.20000000298023224,
+              "value": true
+            }
+          ]
+        },
+        "comps": {}
+      }
+    }
+  },
+  "events": []
+}

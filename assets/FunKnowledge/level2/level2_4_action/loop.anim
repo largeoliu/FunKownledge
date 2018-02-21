@@ -1,0 +1,197 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "loop",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 2.133333444595337,
+  "sample": 30,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "s/ani_mc": {
+        "props": {
+          "scaleX": [
+            {
+              "frame": 0,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.2666666805744171,
+              "value": 1.0199999809265137,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.5333333611488342,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.800000011920929,
+              "value": 1.0199999809265137,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.0666667222976685,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.3333333730697632,
+              "value": 1.0199999809265137,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.600000023841858,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.8666666746139526,
+              "value": 1.0199999809265137,
+              "curve": "linear"
+            },
+            {
+              "frame": 2.133333444595337,
+              "value": 1,
+              "curve": "linear"
+            }
+          ],
+          "scaleY": [
+            {
+              "frame": 0,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.2666666805744171,
+              "value": 0.9800000190734863,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.5333333611488342,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.800000011920929,
+              "value": 0.9800000190734863,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.0666667222976685,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.3333333730697632,
+              "value": 0.9800000190734863,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.600000023841858,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.8666666746139526,
+              "value": 0.9800000190734863,
+              "curve": "linear"
+            },
+            {
+              "frame": 2.133333444595337,
+              "value": 1,
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "s/ani_mc/p9_2": {
+        "props": {
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.5333333611488342,
+              "value": 10,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.0666667222976685,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.600000023841858,
+              "value": -10,
+              "curve": "linear"
+            },
+            {
+              "frame": 2.133333444595337,
+              "value": 0,
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "s/ani_mc/p9_4": {
+        "props": {
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.5333333611488342,
+              "value": -5,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.0666667222976685,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.600000023841858,
+              "value": 5,
+              "curve": "linear"
+            },
+            {
+              "frame": 2.133333444595337,
+              "value": 0,
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "s/ani_mc/p9_4/p9_5": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            },
+            {
+              "frame": 1.0666667222976685,
+              "value": true
+            },
+            {
+              "frame": 1.2333333492279053,
+              "value": false
+            }
+          ]
+        },
+        "comps": {}
+      }
+    }
+  },
+  "events": []
+}

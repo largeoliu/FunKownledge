@@ -1,0 +1,97 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "loop",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 2.133333444595337,
+  "sample": 30,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "s/ani_mc": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                55.86592102050781,
+                15.180265426635742
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 0.5333333611488342,
+              "value": [
+                55.86592102050781,
+                18.026565551757812
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 1.0666667222976685,
+              "value": [
+                55.86592102050781,
+                15.180265426635742
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 1.600000023841858,
+              "value": [
+                55.86592102050781,
+                12.14421272277832
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 2.133333444595337,
+              "value": [
+                55.86592102050781,
+                15.180265426635742
+              ],
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "s/ani_mc/p19_4": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            },
+            {
+              "frame": 0.36666667461395264,
+              "value": true
+            },
+            {
+              "frame": 0.5,
+              "value": false
+            },
+            {
+              "frame": 1.100000023841858,
+              "value": true
+            },
+            {
+              "frame": 1.2999999523162842,
+              "value": false
+            },
+            {
+              "frame": 1.4666666984558105,
+              "value": true
+            },
+            {
+              "frame": 1.6666666269302368,
+              "value": false
+            }
+          ]
+        },
+        "comps": {}
+      }
+    }
+  },
+  "events": []
+}

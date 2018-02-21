@@ -1,0 +1,359 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "loop",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 2.6666667461395264,
+  "sample": 30,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "s/ani_mc": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                53.258846282958984,
+                38.709678649902344
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 0.3333333432674408,
+              "value": [
+                53.258846282958984,
+                40.60721206665039
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 0.6666666865348816,
+              "value": [
+                53.258846282958984,
+                38.709678649902344
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 1,
+              "value": [
+                53.258846282958984,
+                36.8121452331543
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 1.3333333730697632,
+              "value": [
+                53.258846282958984,
+                38.709678649902344
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 1.6666666269302368,
+              "value": [
+                53.258846282958984,
+                40.60721206665039
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 2,
+              "value": [
+                53.258846282958984,
+                38.709678649902344
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 2.3333332538604736,
+              "value": [
+                53.258846282958984,
+                36.8121452331543
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 2.6666667461395264,
+              "value": [
+                53.258846282958984,
+                38.709678649902344
+              ],
+              "curve": "linear"
+            }
+          ],
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.3333333432674408,
+              "value": 5,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.6666666865348816,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 1,
+              "value": -5,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.3333333730697632,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.6666666269302368,
+              "value": 5,
+              "curve": "linear"
+            },
+            {
+              "frame": 2,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 2.3333332538604736,
+              "value": -5,
+              "curve": "linear"
+            },
+            {
+              "frame": 2.6666667461395264,
+              "value": 0,
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "s/ani_mc/p3_2": {
+        "props": {
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.3333333432674408,
+              "value": -12,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.6666666865348816,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 1,
+              "value": 12,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.3333333730697632,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.6666666269302368,
+              "value": -15,
+              "curve": "linear"
+            },
+            {
+              "frame": 2,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 2.3333332538604736,
+              "value": 15,
+              "curve": "linear"
+            },
+            {
+              "frame": 2.6666667461395264,
+              "value": 0,
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "s/ani_mc/p3_4": {
+        "props": {
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.3333333432674408,
+              "value": 5,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.6666666865348816,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 1,
+              "value": -5,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.3333333730697632,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.6666666269302368,
+              "value": 5,
+              "curve": "linear"
+            },
+            {
+              "frame": 2,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 2.3333332538604736,
+              "value": -5,
+              "curve": "linear"
+            },
+            {
+              "frame": 2.6666667461395264,
+              "value": 0,
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "s/ani_mc/p3_4/p3_5": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            },
+            {
+              "frame": 0.6666666865348816,
+              "value": true
+            },
+            {
+              "frame": 0.800000011920929,
+              "value": false
+            },
+            {
+              "frame": 0.8666666746139526,
+              "value": true
+            },
+            {
+              "frame": 1,
+              "value": false
+            },
+            {
+              "frame": 1.899999976158142,
+              "value": true
+            },
+            {
+              "frame": 2.0333333015441895,
+              "value": false
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "s/p3_6": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                250.58836364746094,
+                363.0798034667969
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 0.3333333432674408,
+              "value": [
+                250.58836364746094,
+                366.0798034667969
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 0.6666666865348816,
+              "value": [
+                250.58836364746094,
+                363.0798034667969
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 1,
+              "value": [
+                250.58836364746094,
+                360.0798034667969
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 1.3333333730697632,
+              "value": [
+                250.58836364746094,
+                363.0798034667969
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 1.6666666269302368,
+              "value": [
+                250.58836364746094,
+                366.0798034667969
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 2,
+              "value": [
+                250.58836364746094,
+                363.0798034667969
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 2.3333332538604736,
+              "value": [
+                250.58836364746094,
+                360.0798034667969
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 2.6666667461395264,
+              "value": [
+                250.58836364746094,
+                363.0798034667969
+              ],
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      }
+    }
+  },
+  "events": []
+}

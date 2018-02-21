@@ -1,0 +1,136 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "loop",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 2,
+  "sample": 30,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "s/ani_mc": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                52.70018768310547,
+                18.975332260131836
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 1,
+              "value": [
+                52.70018768310547,
+                17.07779884338379
+              ],
+              "curve": "linear"
+            },
+            {
+              "frame": 2,
+              "value": [
+                52.70018768310547,
+                18.975332260131836
+              ],
+              "curve": "linear"
+            }
+          ],
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.5,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1,
+              "value": 0,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.5,
+              "value": -1,
+              "curve": "linear"
+            },
+            {
+              "frame": 2,
+              "value": 0,
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "s/p33_2": {
+        "props": {
+          "scaleX": [
+            {
+              "frame": 0,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.5,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.5,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 2,
+              "value": 1,
+              "curve": "linear"
+            }
+          ],
+          "scaleY": [
+            {
+              "frame": 0,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.5,
+              "value": 0.9800000190734863,
+              "curve": "linear"
+            },
+            {
+              "frame": 1,
+              "value": 1,
+              "curve": "linear"
+            },
+            {
+              "frame": 1.5,
+              "value": 1.0199999809265137,
+              "curve": "linear"
+            },
+            {
+              "frame": 2,
+              "value": 1,
+              "curve": "linear"
+            }
+          ]
+        },
+        "comps": {}
+      },
+      "CCBFile": {
+        "props": {},
+        "comps": {}
+      }
+    }
+  },
+  "events": []
+}
