@@ -9,41 +9,45 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        _ccb:null,
-        _root:null,
         _originPosition:null,
         _state:AnswerNodeState.NORMAL,
+        
+        root: cc.Node,
+        spr: cc.Sprite
     },
 
-     init:function (ccb, root) {
-        this._ccb = ccb;
-        this._root = root;
-        this._originPosition = this._ccb.getPosition();
+    onLoad: function(){
+        this._originPosition = this.node.getPosition();
     },
 
-    setSpriteFrame:function(name){
-        this._ccb.getChildByTag(1).getChildByTag(1).getChildByTag(1).setSpriteFrame(name);
+    setSpriteFrame:function(atlasName, frameName){
+        cc.log("setSpriteFrame: "+atlasName+"  "+frameName);
+
+        cc.loader.loadRes(atlasName, cc.SpriteAtlas, function (err, atlas) {
+            var spriteFrame = atlas.getSpriteFrame(frameName);
+            this.spr.getComponent(cc.Sprite).spriteFrame = spriteFrame;
+        }.bind(this));
     },
 
     active:function(){
-        this._ccb.animationManager.runAnimationsForSequenceNamed("p");
+        this.node.getComponent(cc.Animation).play("p");
         this._state = AnswerNodeState.ACTIVE;
     },
 
     resume:function(){
-        this._ccb.setPosition(this._originPosition);
-        this._ccb.animationManager.runAnimationsForSequenceNamed("normal");
+        this.node.setPosition(this._originPosition);
+        this.node.getComponent(cc.Animation).play("normal");
         this._state = AnswerNodeState.NORMAL; 
     },
 
     disappear:function(){
-        this._ccb.setPosition(this._originPosition);
-        this._ccb.animationManager.runAnimationsForSequenceNamed("out");
+        this.node.setPosition(this._originPosition);
+        this.node.getComponent(cc.Animation).play("out");
         this._state = AnswerNodeState.OVER;
     },
 
     radius:function(){
-        return this._ccb.getContentSize().width/2;
+        return this.node.getContentSize().width/2;
     },
 
     worldPosition:function(){

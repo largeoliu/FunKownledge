@@ -11,16 +11,6 @@
     "paths": {
       "answer_mc/CCBFile": {
         "props": {
-          "position": [
-            {
-              "frame": 0,
-              "value": [
-                -879.7916641235352,
-                -539.8333320617676
-              ],
-              "curve": "linear"
-            }
-          ],
           "scaleX": [
             {
               "frame": 0,
@@ -50,16 +40,6 @@
       },
       "answer_mc/CCBFile_1": {
         "props": {
-          "position": [
-            {
-              "frame": 0,
-              "value": [
-                -879.7916641235352,
-                -564.8333320617676
-              ],
-              "curve": "linear"
-            }
-          ],
           "scaleX": [
             {
               "frame": 0.1666666716337204,
@@ -89,16 +69,6 @@
       },
       "answer_mc/CCBFile_2": {
         "props": {
-          "position": [
-            {
-              "frame": 0,
-              "value": [
-                -879.7916641235352,
-                -589.5833330154419
-              ],
-              "curve": "linear"
-            }
-          ],
           "scaleX": [
             {
               "frame": 0.3333333432674408,

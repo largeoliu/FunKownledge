@@ -1,9 +1,9 @@
-require("LevelInfo");
+var LevelInfo = require("LevelInfo");
 
 var LevelManager = cc.Class({
 
     ctor:function(){   
-        this._curLevel = 0;
+        this._curLevel = 1;
         this._curIndex = 1;
         this.MAX_INDEX = 5;
     },
@@ -22,10 +22,10 @@ var LevelManager = cc.Class({
 });
 
 var s_levelManager = null;
-LevelManager.getInstance = function(){
+
+module.exports.getInstance = function(){
     if(s_levelManager == null){
         s_levelManager = new LevelManager;
-        s_levelManager.init();
     }
     return s_levelManager;
-}
+};

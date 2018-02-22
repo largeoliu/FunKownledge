@@ -1,5 +1,5 @@
-require('LevelManager');
-var util = require('util');
+var LevelManager = require('LevelManager');
+var Utils = require('Utils');
 
 cc.Class({
    
@@ -10,20 +10,29 @@ cc.Class({
         FULL_MARK:3,
         _curAnswerCCB:null,
         _score:0,
-        _answerNodes:[]
+        
+        answerNodes:[cc.Node],
+
+        animateLayer: {
+            default: null,
+            type: cc.Node
+        },
+
+        level_text_ccb: cc.Node,
+        level_text_spr: cc.Sprite,
     },
 
     // use this for initialization
     onLoad: function () {
 
-        this._game_ui = util.loadCCB("game_mc", this);
-        this.node.addChild(this._game_ui);
+        this.setInputControl();
 
-        setInputControl();
+    },
 
+    start: function(){
         this._newGame();
 
-        util.playMusic("all/bgm.mp3");
+        Utils.playMusic("all/bgm.mp3");
     },
 
     // called every frame
@@ -51,7 +60,7 @@ cc.Class({
 
 
     exitGame:function(){
-        
+
     },
 
     _distance:function(pos1, pos2){
@@ -158,15 +167,8 @@ cc.Class({
         this.menu.setEnabled(true);
     },
 
-    _createAnswerNodes:function(tag){
-        var answerBtnLayer = this.answer_ccb.getChildByTag(1);
-        var answerBtn = answerBtnLayer.getChildByTag(tag);
-        this._answerNodes[tag] = null;
-        this._answerNodes[tag] =  new AnswerNode(answerBtn, this);
-    },
-
     _getAnswerNode:function(tag){
-        return this._answerNodes[tag];
+        return this.answerNodes[tag-1];
     },
 
     _getInlaySpr:function(tag){
@@ -191,23 +193,25 @@ cc.Class({
 
         var level = LevelManager.getInstance().currentLevel();
 
-        cc.SpriteFrameCache.getInstance().addSpriteFrames("level"+level.level+"_btn.plist");
+        // cc.SpriteFrameCache.getInstance().addSpriteFrames("level"+level.level+"_btn.plist");
+        
+        Utils.loadCCB(this._level_ccb_name(level), function (node){
+            this._level_animate_ccb = node;
+            this.animateLayer.addChild(this._level_animate_ccb);
+        }.bind(this));
 
-        this._level_animate_ccb = cc.BuilderReader.load(this._level_ccb_name(level), this);
-        this.animateLayer.addChild(this._level_animate_ccb);
+        cc.loader.loadRes(this._level_word_spr_name(level), cc.SpriteFrame, function (err, spriteFrame) {
+            this.level_text_spr.getComponent(cc.Sprite).spriteFrame = spriteFrame;
+        }.bind(this));
 
-        this._level_text_ccb = cc.BuilderReader.load(this._level_word_ccb_name(level), this);
-        this.titleLayer.addChild(this._level_text_ccb);
 
         for(var i = 1; i<=this.MAX_INDEX; i++){
-            this._createAnswerNodes(i);
-            this._getAnswerNode(i).setSpriteFrame("level"+level.level+"_btn"+((level.index-1)*this.MAX_INDEX+i)+".png");
-            this._getAnswerNode(i).resume();
+            this._getAnswerNode(i).getComponent("AnswerNode").setSpriteFrame("level"+level.level+"/level"+level.level+"_btn", "level"+level.level+"_btn"+((level.index-1)*this.MAX_INDEX+i));
+            this._getAnswerNode(i).getComponent("AnswerNode").resume();
         }
-        
-        this.answer_ccb.animationManager.runAnimationsForSequenceNamed("in");
-                     
-        sys.localStorage.setItem("level", level.index+"");
+        // this.answer_ccb.animationManager.runAnimationsForSequenceNamed("in");
+          
+        cc.sys.localStorage.setItem("level", level.index+"");
     },
 
     onReplay:function(){
@@ -235,11 +239,13 @@ cc.Class({
     _level_ccb_name:function(levelInfo){
         var level = levelInfo.level;
         var index = levelInfo.index;
-        return "level"+level+"/level"+level+"_"+index;
+        return "level"+level+"/"+index+"/level"+level+"_"+index;
     },
 
-    _level_word_ccb_name:function(levelInfo){
-        return this._level_ccb_name(levelInfo)+"_word";
+    _level_word_spr_name:function(levelInfo){
+        var level = levelInfo.level;
+        var index = levelInfo.index;
+        return "level"+level+"/"+index+"/"+index;
     }
 
 

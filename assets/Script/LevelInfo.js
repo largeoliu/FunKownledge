@@ -3,7 +3,7 @@ function LevelInfo(level, index){
     this.index = index;
 } 
 
-LevelInfo.create = function(level, index){
+module.exports.create = function(level, index){
     var info = new LevelInfo(level, index);
     return info;
 }; 
