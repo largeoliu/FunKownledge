@@ -1,6 +1,8 @@
 var LevelManager = require('LevelManager');
 var Utils = require('Utils');
 
+var s_inlaySprs = ["CCBFile", "CCBFile_1", "CCBFile_2"];
+
 cc.Class({
    
     extends: cc.Component,
@@ -24,38 +26,21 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-
         this.setInputControl();
-
     },
 
     start: function(){
         this._newGame();
 
-        Utils.playMusic("all/bgm.mp3");
+        Utils.playMusic("resources/Sound/bgm.mp3", true);
     },
 
-    // called every frame
-    update: function (dt) {
-
-    },
 
     setInputControl: function(){
-        var self = this;
-        this._touchListener = cc.eventManager.addListener({
-            event: cc.EventListener.TOUCH_ONE_BY_ONE,
-            swallowTouches: true,
-            onTouchBegan: this.onTouchBegan,
-            onTouchMoved: this.onTouchMoved,
-            onTouchEnded: this.onTouchEnded,
-            onTouchCancelled: this.onTouchCancelled
-        }, self.node);
-
-        this._keyListener = cc.eventManager.addListener({
-            event: cc.EventListener.KEYBOARD,
-            onKeyPressed: this.onKeyPressed,
-            onKeyReleased: this.onKeyReleased
-        }, self.node);
+        this.node.on(cc.Node.EventType.TOUCH_START, this.onTouchBegan, this);
+        this.node.on(cc.Node.EventType.TOUCH_MOVE, this.onTouchMoved, this);
+        this.node.on(cc.Node.EventType.TOUCH_END, this.onTouchEnded, this);
+        this.node.on(cc.Node.EventType.TOUCH_CANCEL, this.onTouchCancelled, this);
     },
 
 
@@ -69,27 +54,17 @@ cc.Class({
         return Math.sqrt(dx * dx + dy * dy);
     },
 
-    onKeyPressed: function (key, event) {
-    },
-
-    onKeyReleased: function (key, event) {
-        var self = event.getCurrentTarget();
-        if(key==cc.KEY["back"]){
-            self.exitGame();
-        }
-    },
-
-    onTouchBegan:function(touch, event) {
-        var pos = touch.getLocation();
-        var self = event.getCurrentTarget();
+    onTouchBegan:function(event) {
+        cc.log("onTouchBegan: "+event);
+        var pos = event.getLocation();
         
-        for(var i = 1; i<=self.MAX_INDEX; i++){
-            var answerNode = self._getAnswerNode(i);
+        for(var i = 1; i<=this.MAX_INDEX; i++){
+            var answerNode = this._getAnswerNode(i).getComponent("AnswerNode");
             var answer_pos = answerNode.worldPosition();
-            if((self._distance(answer_pos, pos)<answerNode.radius()) && (answerNode.state()==AnswerNodeState.NORMAL)){
+            if((this._distance(answer_pos, pos)<answerNode.radius()) && (answerNode.state()==AnswerNodeState.NORMAL)){
                 answerNode.active();
-                self._curAnswerCCB = answerNode;
-                cc.audioEngine.playEffect("all/btn_p.mp3");
+                this._curAnswerCCB = answerNode;
+                Utils.playMusic("resources/Sound/btn_p.mp3");
                 return true;
             }
         }
@@ -97,26 +72,23 @@ cc.Class({
         return false;
     },
 
-    onTouchMoved:function(touch, event) {
-        var pos = touch.getLocation();
-        var self = event.getCurrentTarget();
+    onTouchMoved:function(event) {
+        var pos = event.getLocation();
 
-        if(self._curAnswerCCB!=null){
-            self._curAnswerCCB.setWorldPosition(pos);
+        if(this._curAnswerCCB!=null){
+            this._curAnswerCCB.setWorldPosition(pos);
         }
         
     },
 
-    onTouchEnded:function(touch, event) {
-        var pos = touch.getLocation();
-        var self = event.getCurrentTarget();
-        self._check(pos);
+    onTouchEnded:function(event) {
+        var pos = event.getLocation();
+        this._check(pos);
     },
 
-    onTouchCancelled:function(touch, event) {
-        var pos = touch.getLocation();
-        var self = event.getCurrentTarget();
-        self._check(pos);
+    onTouchCancelled:function(event) {
+        var pos = event.getLocation();
+        tnis._check(pos);
     },
 
     _check:function(pos){
@@ -131,10 +103,10 @@ cc.Class({
 
         if(this._distance(correct, pos)<spr.getContentSize().width/2){
             this._onCorrect();
-            cc.audioEngine.playEffect("all/btn_right.mp3");
+            Utils.playMusic("resources/Sound/btn_right.mp3");
         }else{
             this._curAnswerCCB.resume();
-            cc.audioEngine.playEffect("all/btn_wrong.mp3");
+            Utils.playMusic("resources/Sound/btn_wrong.mp3");
         }
 
     },
@@ -157,7 +129,7 @@ cc.Class({
 
     _onSuccess:function(){
         var level = LevelManager.getInstance().currentLevel();
-        cc.audioEngine.playEffect("level"+level.level+"_"+level.index+".mp3");
+        Utils.playMusic("resources/Sound/level"+level.level+"_"+level.index+".mp3");
         this._level_animate_ccb.animationManager.runAnimationsForSequenceNamed("act");
         this._level_text_ccb.animationManager.runAnimationsForSequenceNamed("act");
         this.menuLayer.animationManager.runAnimationsForSequenceNamed("in");
@@ -172,8 +144,7 @@ cc.Class({
     },
 
     _getInlaySpr:function(tag){
-        var level = LevelManager.getInstance().currentLevel();
-        return eval("this.jv_"+((level.index-1)*this.MAX_INDEX+tag));
+        return cc.find(s_inlaySprs[tag-1], this._level_animate_ccb);
     },
 
     _newGame:function(){

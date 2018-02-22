@@ -12,6 +12,7 @@ cc.Class({
         _originPosition:null,
         _state:AnswerNodeState.NORMAL,
         
+        index: cc.Integer,
         root: cc.Node,
         spr: cc.Sprite
     },
@@ -51,21 +52,21 @@ cc.Class({
     },
 
     worldPosition:function(){
-        var point = this._root.convertToWorldSpace(this._ccb.getPosition());
+        var point = this.root.convertToWorldSpace(this.node.getPosition());
         point.x += this.radius();
         point.y += this.radius();
         return point;
     },
 
     setWorldPosition:function(pos){
-        var point = this._root.convertToNodeSpace(pos);
+        var point = this.root.convertToNodeSpace(pos);
         point.x = point.x-this.radius();
         point.y = point.y-this.radius();
-        this._ccb.setPosition(point);
+        this.node.setPosition(point);
     },
 
     tag:function(){
-        return this._ccb.getTag();
+        return this.index;
     },
 
     state:function(){

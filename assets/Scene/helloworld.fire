@@ -1989,6 +1989,7 @@
     "_enabled": true,
     "_originPosition": null,
     "_state": 0,
+    "index": "1",
     "root": {
       "__id__": 2
     },
@@ -2436,6 +2437,7 @@
     "_enabled": true,
     "_originPosition": null,
     "_state": 0,
+    "index": "2",
     "root": {
       "__id__": 2
     },
@@ -2883,6 +2885,7 @@
     "_enabled": true,
     "_originPosition": null,
     "_state": 0,
+    "index": "3",
     "root": {
       "__id__": 2
     },
