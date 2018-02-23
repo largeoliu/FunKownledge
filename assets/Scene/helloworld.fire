@@ -3256,6 +3256,8 @@
     "level_text_spr": {
       "__id__": 34
     },
-    "menuLayer": null
+    "menuLayer": {
+      "__id__": 15
+    }
   }
 ]
