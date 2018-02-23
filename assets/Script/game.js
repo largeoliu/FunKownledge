@@ -146,6 +146,7 @@ cc.Class({
         Utils.playMusic("resources/level"+level.level+"/"+level.index+"/level"+level.level+"_"+level.index+".mp3");
         this._level_animate_ccb.getComponent(cc.Animation).play("act");
         this.level_text_ccb.getComponent(cc.Animation).play("act");
+        this.menuLayer.active = true;
         this.menuLayer.getComponent(cc.Animation).play("in");
         if(LevelManager.getInstance().isEnd()){
             this.nextBtn.setVisible(false);

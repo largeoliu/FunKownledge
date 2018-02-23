@@ -1,0 +1,1 @@
+[{"__type__":"cc.AnimationClip","_name":"normal","_duration":0.3333333432674408,"sample":30,"curveData":{"paths":{"btn_mc":{"props":{"active":[{"frame":0,"value":true}]},"comps":{}},"tx":{"props":{},"comps":{}}}}},{"__type__":"cc.AnimationClip","_name":"out","_duration":1,"sample":30,"curveData":{"paths":{"btn_mc":{"props":{"active":[{"frame":0,"value":false}]}}}}}]
