@@ -7,5 +7,19 @@
   "sample": 30,
   "speed": 1,
   "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "btn_mc": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            }
+          ]
+        }
+      }
+    }
+  },
   "events": []
 }

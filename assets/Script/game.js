@@ -1,5 +1,6 @@
 var LevelManager = require('LevelManager');
 var Utils = require('Utils');
+var AnswerNode = require('AnswerNode');
 
 var s_inlaySprs = ["CCBFile", "CCBFile_1", "CCBFile_2"];
 
@@ -22,11 +23,12 @@ cc.Class({
 
         level_text_ccb: cc.Node,
         level_text_spr: cc.Sprite,
+        menuLayer: cc.Node
     },
 
     // use this for initialization
     onLoad: function () {
-        this.setInputControl();
+        this.setInputControl(true);
     },
 
     start: function(){
@@ -36,11 +38,18 @@ cc.Class({
     },
 
 
-    setInputControl: function(){
-        this.node.on(cc.Node.EventType.TOUCH_START, this.onTouchBegan, this);
-        this.node.on(cc.Node.EventType.TOUCH_MOVE, this.onTouchMoved, this);
-        this.node.on(cc.Node.EventType.TOUCH_END, this.onTouchEnded, this);
-        this.node.on(cc.Node.EventType.TOUCH_CANCEL, this.onTouchCancelled, this);
+    setInputControl: function(on){
+        if(on){
+            this.node.on(cc.Node.EventType.TOUCH_START, this.onTouchBegan, this);
+            this.node.on(cc.Node.EventType.TOUCH_MOVE, this.onTouchMoved, this);
+            this.node.on(cc.Node.EventType.TOUCH_END, this.onTouchEnded, this);
+            this.node.on(cc.Node.EventType.TOUCH_CANCEL, this.onTouchCancelled, this);
+        }else{
+            this.node.off(cc.Node.EventType.TOUCH_START, this.onTouchBegan, this);
+            this.node.off(cc.Node.EventType.TOUCH_MOVE, this.onTouchMoved, this);
+            this.node.off(cc.Node.EventType.TOUCH_END, this.onTouchEnded, this);
+            this.node.off(cc.Node.EventType.TOUCH_CANCEL, this.onTouchCancelled, this);
+        }
     },
 
 
@@ -55,13 +64,16 @@ cc.Class({
     },
 
     onTouchBegan:function(event) {
-        cc.log("onTouchBegan: "+event);
-        var pos = event.getLocation();
-        
+        var pos = this.node.convertTouchToNodeSpaceAR(event.touch);
+        cc.log("onTouchBegan: "+pos.x+" "+pos.y);
+
         for(var i = 1; i<=this.MAX_INDEX; i++){
             var answerNode = this._getAnswerNode(i).getComponent("AnswerNode");
             var answer_pos = answerNode.worldPosition();
-            if((this._distance(answer_pos, pos)<answerNode.radius()) && (answerNode.state()==AnswerNodeState.NORMAL)){
+            cc.log("answer_pos: "+answer_pos.x+" "+answer_pos.y);
+            cc.log("distance: "+this._distance(answer_pos, pos));
+            cc.log("radius: "+answerNode.radius());
+            if((this._distance(answer_pos, pos)<answerNode.radius()) && (answerNode.state()==AnswerNode.AnswerNodeState.NORMAL)){
                 answerNode.active();
                 this._curAnswerCCB = answerNode;
                 Utils.playMusic("resources/Sound/btn_p.mp3");
@@ -73,7 +85,7 @@ cc.Class({
     },
 
     onTouchMoved:function(event) {
-        var pos = event.getLocation();
+        var pos = this.node.convertTouchToNodeSpaceAR(event.touch);
 
         if(this._curAnswerCCB!=null){
             this._curAnswerCCB.setWorldPosition(pos);
@@ -82,12 +94,12 @@ cc.Class({
     },
 
     onTouchEnded:function(event) {
-        var pos = event.getLocation();
+        var pos = this.node.convertTouchToNodeSpaceAR(event.touch);
         this._check(pos);
     },
 
     onTouchCancelled:function(event) {
-        var pos = event.getLocation();
+        var pos = this.node.convertTouchToNodeSpaceAR(event.touch);
         tnis._check(pos);
     },
 
@@ -96,7 +108,7 @@ cc.Class({
         
         var spr = this._getInlaySpr(this._curAnswerCCB.tag());
         var correct = spr.getPosition();
-        var dp = this.convertToWorldSpace(this.animateLayer.getPosition());
+        var dp = this.node.convertToWorldSpace(this.animateLayer.getPosition());
 
         correct.x = correct.x+dp.x+spr.getContentSize().width/2;
         correct.y = correct.y+dp.y+spr.getContentSize().height/2;
@@ -112,12 +124,14 @@ cc.Class({
     },
 
     _onCorrect:function(){
+        cc.log("_onCorrect");
         var inlay = this._getInlaySpr(this._curAnswerCCB.tag());
-        inlay.animationManager.runAnimationsForSequenceNamed("out");
-        var particle = cc.BuilderReader.load("title_tx", this);
-        particle.setPosition(cc.p(inlay.getContentSize().width/2, inlay.getContentSize().height/2));
-        particle.setAnchorPoint(cc.p(0.5, 0.5));
-        inlay.addChild(particle);
+        inlay.getComponent(cc.Animation).play("out");
+        Utils.loadCCB("prefab/title_tx", function (particle){
+            particle.setPosition(cc.p(inlay.getContentSize().width/2, inlay.getContentSize().height/2));
+            particle.setAnchorPoint(cc.p(0.5, 0.5));
+            inlay.addChild(particle);
+        });
 
         this._curAnswerCCB.disappear();
         this._score++;
@@ -129,14 +143,13 @@ cc.Class({
 
     _onSuccess:function(){
         var level = LevelManager.getInstance().currentLevel();
-        Utils.playMusic("resources/Sound/level"+level.level+"_"+level.index+".mp3");
-        this._level_animate_ccb.animationManager.runAnimationsForSequenceNamed("act");
-        this._level_text_ccb.animationManager.runAnimationsForSequenceNamed("act");
-        this.menuLayer.animationManager.runAnimationsForSequenceNamed("in");
+        Utils.playMusic("resources/level"+level.level+"/"+level.index+"/level"+level.level+"_"+level.index+".mp3");
+        this._level_animate_ccb.getComponent(cc.Animation).play("act");
+        this.level_text_ccb.getComponent(cc.Animation).play("act");
+        this.menuLayer.getComponent(cc.Animation).play("in");
         if(LevelManager.getInstance().isEnd()){
             this.nextBtn.setVisible(false);
         }
-        this.menu.setEnabled(true);
     },
 
     _getAnswerNode:function(tag){
@@ -158,7 +171,7 @@ cc.Class({
 
             this.menuLayer.animationManager.runAnimationsForSequenceNamed("out");
             this.menuLayer.animationManager.setCompletedAnimationCallback(this, function(){
-                this._touchListener.setEnabled(true);
+                this.setInputControl(true);
             });
         }
 
@@ -187,20 +200,20 @@ cc.Class({
 
     onReplay:function(){
         this.menu.setEnabled(false);
-        this._touchListener.setEnabled(false);
+        this.setInputControl(false);
         this._newGame();
     },
 
     onNext:function(){
         this.menu.setEnabled(false);
-        this._touchListener.setEnabled(false);
+        this.setInputControl(MSFIDOCredentialAssertion);
         LevelManager.getInstance().next();
         this._newGame();
     },
 
                                 
     onClick:function(levelInfo){
-        this._level_animate_ccb.animationManager.runAnimationsForSequenceNamed("act");
+        this._level_animate_ccb.getComponent(cc.Animation).play("act");
     },
 
     onExitGame:function(){

@@ -7,6 +7,7 @@ function loadCCB(file, callback){
 }
 
 function playMusic(file, loop){
+    cc.log("playMusic: "+file);
     cc.audioEngine.play(cc.url.raw(file), loop);
 }
 

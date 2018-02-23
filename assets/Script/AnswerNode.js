@@ -74,3 +74,5 @@ cc.Class({
     }
 
 });
+
+module.exports.AnswerNodeState = AnswerNodeState;
